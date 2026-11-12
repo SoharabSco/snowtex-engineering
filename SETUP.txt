@@ -1,0 +1,71 @@
+SNOWTEX ENGINEERING - INSTALLABLE APP (front door on GitHub Pages)
+==================================================================
+What this is: a tiny free website that shows your Apps Script app full
+screen, with its own icon, name and splash screen, and can be INSTALLED
+on phones and computers. Your Apps Script app stays exactly as it is.
+
+Files (keep the folder structure):
+   index.html, manifest.webmanifest, sw.js, icons/ (6 files)
+
+------------------------------------------------------------------
+PART 1 - PUT IT ONLINE (once, about 15 minutes)
+------------------------------------------------------------------
+1. Go to https://github.com and Sign up (free). Remember your username.
+2. Top right "+" > New repository
+      Repository name:  snowtex-engineering
+      Public
+      > Create repository
+3. On the new page click "uploading an existing file".
+   Unzip snowtex-engineering-app.zip on your computer, then DRAG all of it
+   (index.html, manifest.webmanifest, sw.js AND the icons folder) into the
+   page. Wait for all files to show, then press "Commit changes".
+4. In the repository: Settings > Pages (left menu)
+      Source: Deploy from a branch
+      Branch: main   /(root)   > Save
+   Wait 1-2 minutes and refresh: the address appears at the top, like
+      https://YOUR-USERNAME.github.io/snowtex-engineering/
+5. Open that address on a computer: the app opens with the Snowtex splash.
+
+------------------------------------------------------------------
+PART 2 - INSTALL ON PHONES
+------------------------------------------------------------------
+Android (Chrome): open the address > a bar "Install Snowtex Engineering"
+   appears (or ⋮ menu > Install app / Add to Home screen) > Install.
+iPhone (Safari): open the address > Share ⬆️ > Add to Home Screen > Add.
+Computer (Chrome / Edge): the install icon at the right of the address bar.
+
+Share the address with the team (WhatsApp / email). Each person logs in once
+inside the app (it remembers the login separately from Chrome).
+
+------------------------------------------------------------------
+PART 3 - QR STICKERS OPEN THE APP
+------------------------------------------------------------------
+1. Apps Script > Project Settings > Script Properties > Add:
+      APP_PUBLIC_URL  =  https://YOUR-USERNAME.github.io/snowtex-engineering/
+2. Replace Machines.gs with the new one (only this link part changed).
+3. Deploy > Manage deployments > edit > New version > Deploy (same deployment).
+4. Print the stickers again. Scanning opens the installed app on that machine.
+   (Old stickers keep working: they open in Chrome.)
+
+------------------------------------------------------------------
+GOOD TO KNOW
+------------------------------------------------------------------
+- Updates: keep updating Apps Script as always. Nothing to change on GitHub.
+- If you ever make a NEW deployment (the /exec link changes): on GitHub open
+  index.html > pencil (edit) > change the APP_URL line > Commit changes.
+- The small grey Google line at the top ("This application was created by a
+  Google Apps Script user") is added by Google for apps from a personal
+  Gmail account. It can't be removed from the app (a Google Workspace
+  account does not show it).
+- No internet: the app shows a "No internet connection" screen with Try again.
+- iPhone may ask you to log in again more often than Android.
+
+------------------------------------------------------------------
+OPTIONAL - ANDROID APP FILE (APK)
+------------------------------------------------------------------
+1. Go to https://www.pwabuilder.com and enter your github.io address > Start.
+2. Package for stores > Android > Generate > Download.
+3. Inside the download: the .apk file can be shared (WhatsApp / Drive) and
+   installed on Android phones (allow "install unknown apps" once).
+   Keep the "signing key" files from the download safe: you need them for
+   any future update or for the Google Play Store.
